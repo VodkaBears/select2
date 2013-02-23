@@ -294,7 +294,7 @@ the specific language governing permissions and limitations under the Apache Lic
             $(classes.split(" ")).each2(function() {
                 if (this.indexOf("select2-") !== 0) {
                     adapted = adapter(this);
-                    if (typeof adapted === "string" && adapted.length > 0) {
+                    if ((typeof adapted === "string" || adapted instanceof String) && adapted.length > 0) {
                         replacements.push(this);
                     }
                 }
